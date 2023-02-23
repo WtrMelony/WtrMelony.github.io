@@ -1,21 +1,136 @@
 <!DOCTYPE html>
-<body>
-  <div class="div1">hi</div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-</body>
-  <style>
-    div.div1 {
-      text-align: center;
-      background-color: blue;
-      color: green;
-    }
-</style>
+    <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <link rel="stylesheet" href=".css">
+          <title>Merchandise</title>
+        </head>
+       
+        <style>
+       
+            * {
+              margin: 0;
+              padding: 0;
+              font-size: 30px;
+            }
+           
+    /*styles the header and navigation */        
+           
+            .top {
+                display: grid;
+                 /* grid-template-columns: repeat(2, 1fr); fractional unit of the whote */
+                grid-template-columns: 80% 15%;
+                grid-column-gap: 40px;  
+                background: #777;
+                padding: 10px;
+                }
+                 
+            .top h1 {
+                font-size: 40px;
+                color: black;
+                /* background: lightblue; */
+                /* text-shadow: 4px 4px 5px gray; */
+                }
+               
+            .top nav {
+                /* background: lightpink; */
+                margin-left: 5px;
+                justify-self: end;
+                align-self: center;
+                }
+               
+            .top nav a {
+                font-size: 18px;
+                text-decoration: none;
+                color: white;
+                }
+   
+    /*styles the main */    
+   
+            .grid-container {
+              height: 100vh;
+              border: 10px solid lightgreen;
+              display: grid;
+              grid-template-rows: 1fr 1fr;
+              grid-template-columns: repeat(3, 1fr);
+              justify-items: center; /*start, end, center, stretch, space-around, space-between, space evenly*/
+              align-items: center;    /*aligns content vertically */
+              grid-row-gap: 20px;
+              grid-column-gap: 20px;
+            }
+
+            .grid-item {
+              background-color: lightblue;
+              border: 4px solid black;
+              padding: 20px;
+            }
+
+    /*styles the grid-items; style them only to position them */    
+
+            .item-1 {
+              grid-column-start:    ;
+              grid-column-end:      ;
+            }
+            .item-2 {
+              grid-column-start:    ;
+              grid-column-end:      ;
+              grid-row-start:         ;
+              grid-row-end:          ;
+             
+            }
+   
+    /*styles all the images */    
+                   
+            img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+            }
+           
+        </style>
+       
+        <body>
+       
+        <!--header and navigation -->
+       
+            <div class="top">
+                <h1>Chicago: City of Big Shoulders</h1>
+                <nav>
+                    <a href="Home">Link#1</a>
+                    <a href="Merch">Link#2</a>
+                    <a href="Concerts"> Link#3</a>
+                </nav>
+            </div>
+           
+        <!--main elements -->
+   
+            <div class="grid-container">
+               
+                <div class="grid-item item-1">
+                    <img src="ramen1.jpg" alt="Yummy Ramen">
+                </div>
+           
+                <div class="grid-item item-2">
+                    <img src="ramen2.jpg" alt="Yummy Ramen">
+                </div>
+           
+                <div class="grid-item item-3">
+                     <img src="ramen3.jpg" alt="Yummy Ramen">
+                </div>
+           
+                <div class="grid-item item-4">
+                    item 4
+                </div>
+           
+                <div class="grid-item item-5">
+                    item 5
+                </div>
+           
+                <div class="grid-item item-6">
+                    item 6
+                </div>
+         
+         </div>
+       
+        </body>
